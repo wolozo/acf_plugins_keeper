@@ -5,7 +5,7 @@
  * Plugin URI:        https://github.com/wolozo/acf_plugins_keeper
  * GitHub Plugin URI: https://github.com/wolozo/acf_plugins_keeper
  * Description:       Help keep the WordPress Plugins page tidy by hiding plugins.
- * Version:           0.0.2
+ * Version:           0.0.3
  * Author:            Wolozo
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       acf_plugins_keeper
@@ -241,8 +241,7 @@ function w_acfpk_hide_plugins() {
 
   global $wp_list_table;
 
-  $plugins   = get_field( 'acfpk_select_plugins_to_hide', 'options' );
-  $plugins[] = 'acf_plugins_keeper/acf_plugins_keeper.php';
+  $plugins = get_field( 'acfpk_select_plugins_to_hide', 'options' );
 
   foreach ( $wp_list_table->items as $key => $val ) {
     if ( in_array( $key, $plugins ) ) {
@@ -281,8 +280,6 @@ function w_acfpk_hide_plugin_updates( $value ) {
   }
 
   $plugins = get_field( 'acfpk_select_plugins_to_hide', 'options' );
-
-  $plugins[] = 'acf_plugins_keeper/acf_plugins_keeper.php';
 
   foreach ( $value->response as $key => $values ) {
     if ( in_array( $key, $plugins ) ) {
