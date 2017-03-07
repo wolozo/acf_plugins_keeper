@@ -159,8 +159,6 @@ function w_acfpk_fields() {
                                        'operator' => '==',
                                        'value'    => 'acf_plugins_keeper',
                                      ),
-                                   ),
-                                   array(
                                      array(
                                        'param'    => 'current_user_role',
                                        'operator' => '==',
