@@ -239,9 +239,11 @@ function w_acfpk_hide_plugins() {
     }
   }
 
-  global $wp_list_table;
+  if ( ! is_array( $plugins = get_field( 'acfpk_select_plugins_to_hide', 'options' ) ) ) {
+    return;
+  }
 
-  $plugins = get_field( 'acfpk_select_plugins_to_hide', 'options' );
+  global $wp_list_table;
 
   foreach ( $wp_list_table->items as $key => $val ) {
     if ( in_array( $key, $plugins ) ) {
