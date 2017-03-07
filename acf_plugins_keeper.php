@@ -5,7 +5,7 @@
  * Plugin URI:        https://github.com/wolozo/acf_plugins_keeper
  * GitHub Plugin URI: https://github.com/wolozo/acf_plugins_keeper
  * Description:       Help keep the WordPress Plugins page tidy by hiding plugins.
- * Version:           0.0.3
+ * Version:           0.0.4
  * Author:            Wolozo
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       acf_plugins_keeper
